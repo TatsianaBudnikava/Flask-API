@@ -1,9 +1,14 @@
 ## Environment
 Python 3.9.23
+
 Platform macOS-15.5-x86_64-i386-64bit
+
 API Framework:	Flask
+
 Test Framework:	pytest + pytest-cov, pytest-html
+
 Performance Testing: Locust
+
 Reporting: pytest-html
 
 ## How to Run the Application and Tests
@@ -117,8 +122,11 @@ test_report.html
 ## Potential Improvements or Observations
 
 Authentication Coverage: Currently, unauthorized access scenarios (e.g., missing or invalid tokens) are not fully covered. Adding dedicated tests for 401 responses will strengthen security validation.
+
 UI Layer Absence: The project does not include a user interface (UI), so no end-to-end or UI tests are available. Implementing even a minimal frontend (e.g., HTML + JS or React) would enable full-stack testing.
+
 Test Coverage Gaps: Some edge cases (e.g., malformed payloads, very large inputs) are not yet tested. Expanding negative test scenarios will improve robustness.
+
 No CI/CD Pipeline: Tests and coverage reports are generated locally. Integrating automated testing and reporting into a CI pipeline (e.g., GitHub Actions, GitLab CI) would enhance workflow efficiency and reliability.
 
 ## Performance Testing with Locust
