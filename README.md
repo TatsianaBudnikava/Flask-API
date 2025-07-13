@@ -72,7 +72,7 @@ Automated tests are implemented with pytest and cover:
 ## Test Automation Reporting
 To ensure the stability and reliability of the REST API, automated tests were implemented and configured to produce reports covering:
 
-## Test Pass/Fail Status
+### Test Pass/Fail Status
 * All test cases are executed using 'Pytest'.
 * The output includes a summary of passed, failed, and skipped tests.
 * Tests cover CRUD operations for employees and skills, input validation, and unauthorized access positive and negative scenarios.
@@ -83,7 +83,7 @@ Run API tests with:
 pytest tests/ --tb=short -v
 ```
 
-## Test Coverage
+### Test Coverage
 Test coverage is measured using `pytest-cov`. It shows which parts of the application code are covered by tests.
 Coverage is measured using the pytest-cov plugin.
 Current coverage: 84%
@@ -111,7 +111,6 @@ pytest tests/ --html=reports/test_report.html --self-contained-html
 ```
 After running the generated report will be created in the project folder.
 test_report.html
-
 
 ## Potential Improvements or Observations
 Authentication Coverage: Currently, unauthorized access scenarios (e.g., missing or invalid tokens) are not fully covered. Adding dedicated tests for 401 responses will strengthen security validation.
