@@ -67,7 +67,6 @@ Automated tests are implemented with pytest and cover:
 - Error handling for:
 - Missing or invalid data
 - Not found (404)
-- Unauthorized access (401 - placeholder for future support)
 
 ## Test Automation Reporting
 To ensure the stability and reliability of the REST API, automated tests were implemented and configured to produce reports covering:
