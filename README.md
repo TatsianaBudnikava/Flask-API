@@ -12,7 +12,6 @@ Performance Testing: Locust
 Reporting: pytest-html
 
 ## How to Run the Application and Tests
-
 Requirements:
 - Python 3.9+
 - pip
@@ -34,11 +33,9 @@ python run.py
 ```
 
 ## Employee & Skills REST API
-
 Flask-based REST API to manage employees and their skills.
 
 ## Features
-
 - Create, update, delete employees
 - Create, update, delete skills
 - List all employees and skills
@@ -73,11 +70,9 @@ Automated tests are implemented with pytest and cover:
 - Unauthorized access (401 - placeholder for future support)
 
 ## Test Automation Reporting
-
 To ensure the stability and reliability of the REST API, automated tests were implemented and configured to produce reports covering:
 
 ## Test Pass/Fail Status
-
 * All test cases are executed using 'Pytest'.
 * The output includes a summary of passed, failed, and skipped tests.
 * Tests cover CRUD operations for employees and skills, input validation, and unauthorized access positive and negative scenarios.
@@ -89,7 +84,6 @@ pytest tests/ --tb=short -v
 ```
 
 ## Test Coverage
-
 Test coverage is measured using `pytest-cov`. It shows which parts of the application code are covered by tests.
 Coverage is measured using the pytest-cov plugin.
 Current coverage: 84%
@@ -120,7 +114,6 @@ test_report.html
 
 
 ## Potential Improvements or Observations
-
 Authentication Coverage: Currently, unauthorized access scenarios (e.g., missing or invalid tokens) are not fully covered. Adding dedicated tests for 401 responses will strengthen security validation.
 
 UI Layer Absence: The project does not include a user interface (UI), so no end-to-end or UI tests are available. Implementing even a minimal frontend (e.g., HTML + JS or React) would enable full-stack testing.
@@ -152,13 +145,11 @@ locust -f locustfile.py --headless -u 100 -r 10 --run-time 5m --csv=locust_repor
 ```
 
 ## Tested Scenarios
-
 * Employee CRUD operations
 * Employee search functionality
 * Handling of invalid requests and errors
 
 ## Metrics Collected
-
 * Average and percentile response times
 * Requests per second (RPS)
 * Failure rates and error counts

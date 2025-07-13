@@ -27,13 +27,6 @@ def register_error_handlers(app):
         details = getattr(e, 'description', None)
         return error_response(400, "Bad request", "BadRequestError", details)
 
-    # @app.errorhandler(401)
-    # def unauthorized(error):
-    #     return jsonify({
-    #     "error": "Unauthorized",
-    #     "message": "Authentication is required to access this resource. Please provide valid credentials (e.g., token or login)."
-    # }), 401
-
     @app.errorhandler(500)
     def internal_error(e):
         app.logger.error(f"Internal server error: {e}")  # Логируем ошибку
