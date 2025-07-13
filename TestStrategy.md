@@ -176,3 +176,29 @@ Monitoring and logs are checked for anomalies in real usage.
 ### Risk-Based Testing
 High-priority features (CRUD, search) are tested with both normal and edge cases; low-risk areas get smoke-level testing.
 
+### Assumptions Made
+Authentication and authorization are not implemented, so security testing is limited to status codes and basic error handling.
+
+The application is assumed to be used in a controlled, internal environment without scaling or DB replication at this stage.
+
+The API is stateless and synchronous, expected to handle 100+ concurrent users under load.
+
+Error handling is centralized, and API response formats are consistent (JSON-based).
+
+UI is out of scope — no frontend layer is available yet.
+
+### Key Trade-Offs & Decisions
+Flask vs FastAPI: Flask was chosen for its simplicity and relevance to the challenge scope. FastAPI would offer better validation and async support but added complexity.
+
+No UI coverage was added, as the project focuses on backend API logic.
+
+Skipped heavy unit testing of models since the main value is in integration/API behavior.
+
+Locust was chosen over heavier tools (like JMeter) for its simplicity and code-based scenario control.
+
+SQLite in-memory: Lightweight, ideal for isolated tests; not suitable for production-scale testing.
+
+Manual vs Automated Edge Tests: Some rare edge cases (e.g., malformed JSON) tested manually due to complexity and lower risk.
+
+No CI pipeline: Setup and reporting are done locally due to project scale, but the structure is CI-ready.
+
