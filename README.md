@@ -132,12 +132,13 @@ pip install locust
 2. Create locustfile.py (created)
 3. Run Locust UI:
 ```bash
-locust -f locustfile.py
+locust -f locustfile.py --host=http://127.0.0.1:5000
 ```
 4. Open the Locust web interface at [http://localhost:8089](http://localhost:8089), specify the number of users (e.g., 100) and spawn rate, then start the test.
 5. Alternatively, run in headless mode for automated tests:
 ```bash
-locust -f locustfile.py --headless -u 100 -r 10 --run-time 5m --csv=locust_report
+locust -f locustfile.py --host=http://127.0.0.1:5000 --headless -u 100 -r 10 --run-time 5m --csv=locust_reports/locust_report
+
 ```
 
 ## Tested Scenarios
