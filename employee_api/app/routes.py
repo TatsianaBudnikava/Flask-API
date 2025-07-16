@@ -46,7 +46,7 @@ def get_employees():
             "id": emp.id,
             "name": emp.name,
             "surname": emp.surname,
-            "skills": [s.name for s in emp.skills]
+            "skills": [{"id": s.id, "name": s.name} for s in emp.skills]
         })
     return jsonify(result)
 
@@ -127,3 +127,6 @@ def get_skill(skill_id):
         "name": skill.name,
         "employee_id": skill.employee_id
     })
+@bp.route("/", methods=["GET"])
+def root():
+    return jsonify({"message": "Welcome to the Employee API!"})

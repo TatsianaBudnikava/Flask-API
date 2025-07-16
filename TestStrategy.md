@@ -61,6 +61,7 @@ Manual testing:	For exploratory tests and edge-case coverage.
 - Test Framework:	pytest + pytest-cov, pytest-html
 - Performance Testing: Locust
 - Reporting: pytest-html
+- Postman: manual API checks
 
 ### Prioritized Areas
 CRUD for Employees & Skills: Core functionality; used in every flow.

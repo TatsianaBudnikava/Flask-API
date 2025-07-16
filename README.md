@@ -11,6 +11,8 @@ Performance Testing: Locust
 
 Reporting: pytest-html
 
+Postman: manual API checks
+
 ## How to Run the Application and Tests
 Requirements:
 - Python 3.9+
@@ -44,10 +46,6 @@ Flask-based REST API to manage employees and their skills.
 - Proper HTTP status codes and error messages
 - Automated testing with `pytest` + `pytest-html`
 - (Optional) Authentication support
-
-## Endpoints
-
-## Employees
 
 ## Create Employee
 `POST /employees`

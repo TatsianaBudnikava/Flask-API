@@ -1,4 +1,3 @@
-
 from flask import jsonify, request
 from datetime import datetime
 
@@ -23,11 +22,11 @@ def register_error_handlers(app):
 
     @app.errorhandler(400)
     def bad_request(e):
-        # e.description может содержать подробности ошибки
+        # e.description may contain error details
         details = getattr(e, 'description', None)
         return error_response(400, "Bad request", "BadRequestError", details)
 
     @app.errorhandler(500)
     def internal_error(e):
-        app.logger.error(f"Internal server error: {e}")  # Логируем ошибку
+        app.logger.error(f"Internal server error: {e}")  # Logging of the error
         return error_response(500, "Internal server error", "InternalServerError")
