@@ -139,6 +139,7 @@ locust -f locustfile.py --host=http://127.0.0.1:5000
 ```bash
 locust -f locustfile.py --host=http://127.0.0.1:5000 --headless -u 100 -r 10 --run-time 5m --csv=locust_reports/locust_report
 
+Note! Run Flask server (python run.py) and Locust in different terminas to avoid performance requests failures.
 ```
 
 ## Tested Scenarios

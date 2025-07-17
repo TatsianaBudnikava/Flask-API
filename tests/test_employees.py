@@ -1,6 +1,5 @@
 import pytest
 
-
 def test_create_employee(client):
     response = client.post("/employees", json={"name": "Alice", "surname": "Smith"})
     assert response.status_code == 201
